@@ -10,6 +10,7 @@
   "scripts": {
     "generateData": "node data_generation/generateRecords.js",
     "connectCassandra": "node database/cassandra/index.js",
+    "seedCassandra": "./data_generation/seedCassandra.sh",
     "connectPostgres": "node database/postgres/index.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "node server/index.js",
@@ -27,6 +28,7 @@
     "mongoose": "^5.4.0",
     "morgan": "^1.9.1",
     "parse-url": "^5.0.0",
+    "pg": "^7.8.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
