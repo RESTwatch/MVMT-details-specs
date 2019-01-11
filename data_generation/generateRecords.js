@@ -112,8 +112,8 @@ const writeRecords = (numRecords, recordsPerFile) => {
       return;
     }
     const okayToWrite = fileWriteStream.write(generateCSVRecord(i, recordsPerFile));
+    i++;
     if (okayToWrite) {
-      i++;
       write();
     } else {
       fileWriteStream.once('drain', () => {
