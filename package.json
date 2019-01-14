@@ -12,6 +12,7 @@
     "connectCassandra": "node database/cassandra/index.js",
     "seedCassandra": "./data_generation/seedCassandra.sh",
     "connectPostgres": "node database/postgres/index.js",
+    "seedPostgres": "node data_generation/seedPostgres.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "node server/index.js",
     "start": "node --max-old-space-size=13312 data_generation/generateRecords.js && node server/index.js",
