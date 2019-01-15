@@ -1,6 +1,8 @@
+require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
-const { getSpecsForId, addWatch, updateWatch, deleteWatch } = require('../database/index.js');
+// const { getSpecsForId, addWatch, updateWatch, deleteWatch } = require('../database/index.js');
+const { getSpecsForId } = require('../database/postgres/index.js');
 
 const app = express();
 
@@ -17,7 +19,7 @@ app.post('/api/watches/:wid/:name', (req, res) => {
 app.get('/api/watches/:wid/details', (req, res) => {
   const id = req.params.wid;
   getSpecsForId(id, (specsForId) => {
-    res.send(specsForId);
+    res.send(specsForId.rows[0]);
   });
 });
 
