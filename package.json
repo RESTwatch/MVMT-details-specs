@@ -15,7 +15,8 @@
     "seedPostgres": "node data_generation/seedPostgres.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "node server/index.js",
-    "start": "node --max-old-space-size=13312 data_generation/generateRecords.js && node server/index.js",
+    "start": "node server/index.js",
+    "stressPg": "k6 run -d 5m --rps 10000 -u 150 server/pgstress.js",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage --colors"
@@ -28,6 +29,7 @@
     "json2csv": "^4.3.2",
     "mongoose": "^5.4.0",
     "morgan": "^1.9.1",
+    "newrelic": "^5.0.0",
     "parse-url": "^5.0.0",
     "pg": "^7.8.0",
     "react": "^16.7.0",
