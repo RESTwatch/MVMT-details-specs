@@ -16,6 +16,7 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "node server/index.js",
     "start": "node server/index.js",
+    "stressPg": "k6 run -d 5m --rps 10000 -u 150 server/pgstress.js",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage --colors"

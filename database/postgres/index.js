@@ -7,8 +7,11 @@ client.connect();
 
 const getSpecsForId = (id, cb) => {
   client.query(`SELECT * FROM Detail WHERE id=${id}`, (err, res) => {
-    if (err) { throw err; }
-    cb(res);
+    if (err) {
+      cb(err);
+    } else {
+      cb(null, res);
+    }
   });
 };
 

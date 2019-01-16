@@ -18,8 +18,13 @@ app.post('/api/watches/:wid/:name', (req, res) => {
 
 app.get('/api/watches/:wid/details', (req, res) => {
   const id = req.params.wid;
-  getSpecsForId(id, (specsForId) => {
-    res.send(specsForId.rows[0]);
+  getSpecsForId(id, (err, specsForId) => {
+    if (err) {
+      console.log(err);
+      res.status(404).send('Error!');
+    } else {
+      res.status(200).send(specsForId.rows[0]);
+    }
   });
 });
 

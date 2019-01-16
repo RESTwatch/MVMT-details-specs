@@ -21,8 +21,8 @@ class Details extends React.Component {
   componentDidMount() {
     const parsedUrl = parseUrl(window.location.href);
     const pathname = parsedUrl.pathname;
-    const wid = pathname.substring(pathname.length - 3); 
-    if (wid < 100 || wid > 199) { return; }
+    const wid = pathname.split('/')[2];
+    // if (wid < 100 || wid > 199) { return; }
 
     const successFn = specs => {
       this.setState({ specs: specs });
@@ -47,10 +47,10 @@ class Details extends React.Component {
 
     let displayComponent;
     switch (this.state.currentDisplay) {
-      case 'read the specs': 
+      case 'read the specs':
         displayComponent = <ReadTheSpecs specs={this.state.specs} />;
         break;
-      case 'see the style': 
+      case 'see the style':
         displayComponent = <SeeTheStyle specs={this.state.specs} />;
         break;
     }
@@ -58,7 +58,7 @@ class Details extends React.Component {
     return (
       <div className="details-body">
         <div className="details-main-container">
-          <img className="details-img" id="details-main-photo" src={this.state.specs.main_photo}/>
+          <img className="details-img" id="details-main-photo" src={this.state.specs.main_photo} />
           <div className="details-right-container">
             <h1 className="details-h1">it's all in the details</h1>
             <Buttons clickHandler={this.handleClick} specs={this.state.specs} />
@@ -66,7 +66,7 @@ class Details extends React.Component {
           </div>
         </div>
       </div>
-    );  
+    );
   }
 };
 
