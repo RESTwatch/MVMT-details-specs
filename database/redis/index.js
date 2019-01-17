@@ -20,7 +20,7 @@ const readRedis = (id, callback) => {
 };
 
 const writeRedis = (record, callback) => {
-  redisClient.set(record.id, JSON.stringify(record), (err) => {
+  redisClient.set(record.id, JSON.stringify(record), 'EX', 600, (err) => {
     if (err) {
       callback(err);
     } else {
