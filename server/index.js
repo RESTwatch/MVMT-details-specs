@@ -20,7 +20,6 @@ app.get('/api/watches/:wid/details', (req, res) => {
   const id = req.params.wid;
   getSpecsForId(id, (err, specsForId) => {
     if (err) {
-      console.log(err);
       res.status(404).send('Error!');
     } else {
       res.status(200).send(specsForId);
