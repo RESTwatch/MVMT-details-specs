@@ -6,6 +6,7 @@ npm
 npm-debug.log
 node_modules/
 newrelic.js
+dump.rdb
 
 config.js
 *.csv

@@ -23,7 +23,7 @@ app.get('/api/watches/:wid/details', (req, res) => {
       console.log(err);
       res.status(404).send('Error!');
     } else {
-      res.status(200).send(specsForId.rows[0]);
+      res.status(200).send(specsForId);
     }
   });
 });
