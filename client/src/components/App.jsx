@@ -42,7 +42,7 @@ class Details extends React.Component {
 
   render() {
     if (this.state.specs === null) {
-      return <div>Please enter a watch id between 100 and 199</div>;
+      return <div>Loading:</div>;
     }
 
     let displayComponent;
