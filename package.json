@@ -15,6 +15,7 @@
     "seedPostgres": "node data_generation/seedPostgres.js",
     "connectRedis": "node database/redis/index.js",
     "react-dev": "webpack -d --watch",
+    "react": "webpack --config webpack.prod.js",
     "server-dev": "node server/index.js",
     "start": "node server/index.js",
     "stressPg": "k6 run -d 5m --rps 10000 -u 150 server/pgstress.js",
@@ -64,6 +65,7 @@
     "regenerator-runtime": "^0.13.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.2.1"
   }
 }
