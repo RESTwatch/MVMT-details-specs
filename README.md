@@ -1,14 +1,13 @@
-# Hack Reactor Front End Capstone
+# RESTwatch Details
 
-> Details/specs component of an item page of MVMT Watches 
-> (https://www.mvmtwatches.com/collections/all-mens-watches/products/voyager-monochrome#)
+> Details/specs component of RESTwatch product details page.
 
 ## Related Projects
 
-  - https://github.com/TheEventHandlers/MVMT-product-photos
-  - https://github.com/TheEventHandlers/MVMT-summary
-  - https://github.com/TheEventHandlers/MVMT-reviews
-  - https://github.com/TheEventHandlers/MVMT-details-specs (this repo)
+  - https://github.com/RESTwatch/MVMT-product-photos
+  - https://github.com/RESTwatch/MVMT-summary
+  - https://github.com/RESTwatch/MVMT-reviews
+  - https://github.com/RESTwatch/MVMT-details-specs
 
 ## Table of Contents
 
@@ -21,7 +20,6 @@
 > To start the app, run the following from the root directory:
 - npm install
 - npm start
-> Then navigate to http://localhost:3003/watches/100/
 
 ## Requirements
 
@@ -36,8 +34,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 From within the root directory:
 
-```sh
 npm install -g webpack
 npm install
-```
 
