@@ -1,6 +1,6 @@
 # RESTwatch Details
 
-> Details/specs component of an item page of a watch
+> Details/specs component of RESTwatch product details page.
 
 ## Related Projects
 
