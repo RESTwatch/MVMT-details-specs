@@ -1,21 +1,39 @@
-# RESTwatch
+# RESTwatch Details
 
-> Reviews component of an e-commerce site for wristwatches.
+> Details/specs component of RESTwatch product details page.
 
 ## Related Projects
 
-  - https://github.com/SDC-Group-2/MVMT-summary
-  - https://github.com/SDC-Group-2/MVMT-details-specs
-  - https://github.com/SDC-Group-2/MVMT-product-photos
+  - https://github.com/RESTwatch/MVMT-product-photos
+  - https://github.com/RESTwatch/MVMT-summary
+  - https://github.com/RESTwatch/MVMT-reviews
+  - https://github.com/RESTwatch/MVMT-details-specs
 
-## Setup & Usage
+## Table of Contents
 
-```sh
-# Generate fake data:
-npm run generate
+1. [Usage](#Usage)
+1. [Requirements](#requirements)
+1. [Development](#development)
 
-# Start app:
-npm run build
-npm run seed-pg
-npm run start-pg
- ```
+## Usage
+
+> To start the app, run the following from the root directory:
+- npm install
+- npm start
+
+## Requirements
+
+An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+
+- Node 6.13.0
+- etc
+
+## Development
+
+### Installing Dependencies
+
+From within the root directory:
+
+npm install -g webpack
+npm install
+
